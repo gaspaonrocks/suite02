@@ -17,3 +17,30 @@
 */
 
 // write your code below this comment
+function randomNum() {
+    var num = parseInt(Math.random() * 100 + 1);
+    return num;
+}
+
+function celToFahr(nb) {
+    var result = (nb * 1.8) + 32;
+    return parseInt(result);
+}
+
+function fahrToCel(nb) {
+    var result = (nb - 32) / 1.8;
+    return parseInt(result);
+}
+
+function randomTemperature(unit) {
+    var temp = randomNum();
+    if (unit == "c") {
+        return fahrToCel(temp) + "°C";
+    } else if (unit == "f") {
+        return celToFahr(temp) + "°F";
+    }
+}
+
+
+console.log(randomTemperature("c"));
+console.log(randomTemperature("f"));
