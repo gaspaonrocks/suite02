@@ -14,3 +14,24 @@
 */
 
 // write your code below this comment
+
+
+function randomIntNum() {
+    var num = parseInt(Math.random() * 100 + 1);
+    return num;
+}
+
+function findSumByMultiples(num) {
+    var sum = 0;
+    for (let i = 0; i < num; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
+            sum += i;
+        }
+    }
+    return sum;
+};
+
+console.log(findSumByMultiples(10));
+console.log(findSumByMultiples(100));
+console.log(findSumByMultiples(1000));
+console.log(findSumByMultiples(randomIntNum()));
