@@ -16,3 +16,32 @@
 
 // write your code below this comment
 
+// PENSER À BOUCLE WHILE
+
+
+function randomIntNumber() {
+    var num = parseInt((Math.random() * 10) + 1);
+    return num;
+}
+
+function isMultiple(limit, num) {
+    for (let i = 1; i <= limit; i++) {
+        if (num % i != 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function smallestMultipleFor(limit) {
+    var num = 1;
+    while (isMultiple(limit, num) == false) {
+        num++;
+    }
+    return num
+}
+
+console.log(smallestMultipleFor(randomIntNumber()));
+console.log(smallestMultipleFor(5));
+console.log(smallestMultipleFor(10));
+console.log(smallestMultipleFor(20));
